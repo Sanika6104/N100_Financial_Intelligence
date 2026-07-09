@@ -1,0 +1,64 @@
+-- Companies
+CREATE TABLE IF NOT EXISTS companies (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    company_name TEXT,
+    ticker TEXT,
+    sector TEXT
+);
+
+-- Analysis
+CREATE TABLE IF NOT EXISTS analysis (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    company_name TEXT,
+    recommendation TEXT
+);
+
+-- Balance Sheet
+CREATE TABLE IF NOT EXISTS balancesheet (
+    id INTEGER PRIMARY KEY AUTOINCREMENT
+);
+
+-- Cashflow
+CREATE TABLE IF NOT EXISTS cashflow (
+    id INTEGER PRIMARY KEY AUTOINCREMENT
+);
+
+-- Documents
+CREATE TABLE IF NOT EXISTS documents (
+    id INTEGER PRIMARY KEY AUTOINCREMENT
+);
+
+-- Financial Ratios
+CREATE TABLE IF NOT EXISTS financial_ratios (
+    id INTEGER PRIMARY KEY AUTOINCREMENT
+);
+
+-- Market Cap
+CREATE TABLE IF NOT EXISTS market_cap (
+    id INTEGER PRIMARY KEY AUTOINCREMENT
+);
+
+-- Peer Groups
+CREATE TABLE IF NOT EXISTS peer_groups (
+    id INTEGER PRIMARY KEY AUTOINCREMENT
+);
+
+-- Profit and Loss
+CREATE TABLE IF NOT EXISTS profitandloss (
+    id INTEGER PRIMARY KEY AUTOINCREMENT
+);
+
+-- Pros and Cons
+CREATE TABLE IF NOT EXISTS prosandcons (
+    id INTEGER PRIMARY KEY AUTOINCREMENT
+);
+
+-- Sectors
+CREATE TABLE IF NOT EXISTS sectors (
+    id INTEGER PRIMARY KEY AUTOINCREMENT
+);
+
+-- Stock Prices
+CREATE TABLE IF NOT EXISTS stock_prices (
+    id INTEGER PRIMARY KEY AUTOINCREMENT
+);

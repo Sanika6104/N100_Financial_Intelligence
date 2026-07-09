@@ -1,6 +1,7 @@
 from loader import DataLoader
 from validator import DataValidator
 from normalizer import DataNormalizer
+from db_loader import DatabaseLoader
 
 
 def main():
@@ -13,6 +14,9 @@ def main():
 
     normalizer = DataNormalizer(dataframes)
     normalizer.normalize()
+
+    database = DatabaseLoader()
+    database.load_to_database()
 
 
 if __name__ == "__main__":
