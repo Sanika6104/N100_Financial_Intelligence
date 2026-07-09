@@ -1,5 +1,6 @@
 from loader import DataLoader
 from validator import DataValidator
+from normalizer import DataNormalizer
 
 
 def main():
@@ -9,6 +10,9 @@ def main():
 
     validator = DataValidator(dataframes)
     validator.validate()
+
+    normalizer = DataNormalizer(dataframes)
+    normalizer.normalize()
 
 
 if __name__ == "__main__":
