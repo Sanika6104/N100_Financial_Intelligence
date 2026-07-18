@@ -1,0 +1,13 @@
+Ratio Edge Case Log
+============================================================
+
+Review Date: Sprint 2
+
+Observed Issues:
+- Financial sector companies excluded from D/E warning.
+- Negative equity handled by returning None for ROE.
+- Interest = 0 handled as Debt Free.
+- CAGR zero base handled.
+- CAGR turnaround cases handled.
+- Operating Profit Margin mismatch logging enabled.
+- No critical runtime errors found.
