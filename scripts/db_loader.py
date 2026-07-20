@@ -25,10 +25,12 @@ class DatabaseLoader:
             if file.endswith(".xlsx"):
 
                 table_name = file.replace(".xlsx", "")
+                file_path = os.path.join(self.processed_path, file)
 
-                df = pd.read_excel(
-                    os.path.join(self.processed_path, file)
-                )
+                if table_name == "companies":
+                    df = pd.read_excel(file_path, header=1)
+                else:
+                    df = pd.read_excel(file_path)
 
                 df.to_sql(
                     table_name,
@@ -42,3 +44,8 @@ class DatabaseLoader:
         conn.close()
 
         print("\nDatabase loading completed.")
+
+
+if __name__ == "__main__":
+    loader = DatabaseLoader()
+    loader.load_to_database()
